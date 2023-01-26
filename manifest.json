@@ -1,0 +1,15 @@
+
+{
+    "manifest_version": 2,
+    "name": "Test Extension",
+    "version": "1.0",
+    "permissions": ["tabs", "activeTab", "storage"],
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+      "matches": ["*://*.example.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }]
+  }
